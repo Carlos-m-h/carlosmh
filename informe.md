@@ -25,7 +25,7 @@ y se observo una anomalia en las ubicaciones, que a simple vista se ve manipulad
 </p>
 
 ## CONCLUSION
-Se realizaran pruebas y sanitizacion exhaustiva a traves de herramientas de antivirus y antimalware,ya que esto puede provocar un mal funcionamiento en el sistema informatico en el cual se realizo la mantencion preventiva de software
+Se realizaran pruebas y sanitizacion exhaustiva a traves de herramientas de antivirus y antimalware,ya que esto puede provocar un mal funcionamiento en el sistema informatico que se realizo la mantencion preventiva de software
 
 
 ## Diagrama de Flujo del Proceso

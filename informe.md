@@ -18,7 +18,7 @@ Configuraciones de Seguridad Ruta del Registro: HKEY_LOCAL_MACHINE\SOFTWARE\Micr
 
 Configuraciones de Zonificación Ruta del Registro: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones
 
-y se observo una anomalia en las ubicaciones, que a simple vista se ve manipulado
+y se observo una anomalia en las ubicaciones, que solo obervando se ve un poco extraño o manipulado
 
 <p align="center">
 <img src="./imagenes/explorer.jpg">

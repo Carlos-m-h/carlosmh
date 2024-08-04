@@ -1,0 +1,884 @@
+<Project version="22.8.0.10" edition="pro" localizationFileName="C:\wamp64\www\easy\lang.en.php" phpDriver="1" outputPath="C:\wamp64\www\easy" copySystemFiles="true" generateModifiedDataOnly="true" outputFilesExtension="php" colorSchemeName="united">
+  <ConnectionOptions host="localhost" port="3306" login="root" password="" database="homeeasy1" client_encoding="utf8" allow_old_password="false">
+    <ssh_secure secure="false" port="22" authentication_mode="0"/>
+    <http_tunnel tunneling="false" url="http://localhost/easy">
+      <http_proxy_server use_proxy="true" address="http://localhost/easy" port="8080" login="admin" password="^?SU\?8~"/>
+      <http_authentication/>
+    </http_tunnel>
+  </ConnectionOptions>
+  <ScriptConnectionOptions host="localhost" port="3306" login="root" password="" database="homeeasy1" client_encoding="utf8" allow_old_password="false">
+    <ssh_secure secure="false" port="22" authentication_mode="0"/>
+    <http_tunnel tunneling="false" url="http://localhost/easy">
+      <http_proxy_server use_proxy="true" address="http://localhost/easy" port="8080" login="admin" password="^?SU\?8~"/>
+      <http_authentication/>
+    </http_tunnel>
+  </ScriptConnectionOptions>
+  <DataSources>
+    <DataSource name="usuarios" createTopLevelPage="false"/>
+    <DataSource name="stock"/>
+    <DataSource name="cotizacion"/>
+    <DataSource name="total_stock"/>
+    <DataSource name="contacto"/>
+    <DataSource name="registro_inicio"/>
+  </DataSources>
+  <Presentation disableMagicQuotesRuntime="false" showEnvironmentVariables="false" showExecutedQueries="false" showPHPErrorsAndWarnings="false">
+    <Pages>
+      <Page type="table" tableName="usuarios" includedIntoPageList="false" numberByDataSource="0" fileName="usuarios" caption="Usuarios" shortCaption="Usuarios" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" deleteAbilityMode="3" deleteSelectedAbilityMode="3" contentEncoding="UTF-8" exportAllRecordsAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="31" printAvailable="13" highlightRowOnMouseHover="true" useActionImages="true" showKeyColumnsImagesInGridHeader="false" borderedTable="true" condensedTable="true" modalFormSize="1">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="id" caption="Id" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="nombre" caption="Nombre" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textBox" maxLength="100"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="email" caption="Email" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textBox" maxLength="100"/>
+            <Validators>
+              <EmailClientValidatorInfo enabled="true"/>
+            </Validators>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="contraseña" caption="Contraseña" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="60"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="fecha_registro" caption="Fecha Registro" canSetNull="true" selectedFilterOperators="2031871">
+            <ViewProperties type="dateTime" dateTimeFormat="Y-m-d H:i:s"/>
+            <EditProperties type="dateTime" dateTimeFormat="Y-m-d H:i:s" firstDayOfWeek="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="rol" caption="Rol" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="comboBox">
+              <Values>
+                <Value name="usuario" caption="usuario"/>
+                <Value name="admin" caption="admin"/>
+              </Values>
+            </EditProperties>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="contraseña"/>
+            <Column fieldName="fecha_registro"/>
+            <Column fieldName="rol"/>
+          </List>
+          <View>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="contraseña"/>
+            <Column fieldName="fecha_registro"/>
+            <Column fieldName="rol"/>
+          </View>
+          <Edit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="contraseña"/>
+            <Column fieldName="fecha_registro"/>
+            <Column fieldName="rol"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="contraseña"/>
+            <Column fieldName="fecha_registro"/>
+            <Column fieldName="rol"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="contraseña"/>
+            <Column fieldName="fecha_registro"/>
+            <Column fieldName="rol"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="contraseña"/>
+            <Column fieldName="fecha_registro"/>
+            <Column fieldName="rol"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="contraseña"/>
+            <Column fieldName="fecha_registro"/>
+            <Column fieldName="rol"/>
+          </Print>
+          <Export>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="contraseña"/>
+            <Column fieldName="fecha_registro"/>
+            <Column fieldName="rol"/>
+          </Export>
+          <Compare>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="contraseña"/>
+            <Column fieldName="fecha_registro"/>
+            <Column fieldName="rol"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email" visible="false"/>
+            <Column fieldName="contraseña"/>
+            <Column fieldName="fecha_registro"/>
+            <Column fieldName="rol"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+      </Page>
+      <Page type="table" tableName="cotizacion" numberByDataSource="0" fileName="cotizacion" caption="Cotizacion" shortCaption="Cotizacion" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" deleteAbilityMode="3" deleteSelectedAbilityMode="3" contentEncoding="UTF-8" exportAllRecordsAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="31" printAvailable="13" highlightRowOnMouseHover="true" useActionImages="true" showKeyColumnsImagesInGridHeader="false" borderedTable="true" condensedTable="true" modalFormSize="1">
+        <DefaultSortedColumns>
+          <Column fieldName="id" orderType="0"/>
+          <Column fieldName="id_usuario" orderType="0"/>
+          <Column fieldName="nombre" orderType="0"/>
+          <Column fieldName="direccion" orderType="0"/>
+          <Column fieldName="email" orderType="0"/>
+          <Column fieldName="telefono" orderType="0"/>
+          <Column fieldName="precio_m3" orderType="0"/>
+          <Column fieldName="cantidad_m3" orderType="0"/>
+          <Column fieldName="total" orderType="0"/>
+        </DefaultSortedColumns>
+        <CompareHeaderColumns>
+          <Column fieldName="id"/>
+          <Column fieldName="id_usuario"/>
+          <Column fieldName="nombre"/>
+          <Column fieldName="direccion"/>
+          <Column fieldName="email"/>
+          <Column fieldName="telefono"/>
+          <Column fieldName="precio_m3"/>
+          <Column fieldName="cantidad_m3"/>
+          <Column fieldName="total"/>
+        </CompareHeaderColumns>
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="id" caption="Id" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text" replaceLFByBR="true">
+              <Format type="number" decimalSeparator="." thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="comboBox">
+              <Values>
+                <Value name="89990" caption="89990"/>
+                <Value name="129990" caption="129990"/>
+              </Values>
+            </EditProperties>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="id_usuario" caption="Id Usuario" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="nombre" caption="Nombre" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textBox" maxLength="100"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="direccion" caption="Direccion" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="email" caption="Email" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textBox" maxLength="100"/>
+            <Validators>
+              <EmailClientValidatorInfo enabled="true"/>
+            </Validators>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="telefono" caption="Telefono" showColumnFilter="false" canSetNull="true" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="20"/>
+            <Validators>
+              <NumberClientValidatorInfo enabled="true"/>
+              <RegExpClientValidatorInfo expression="ingrese numero"/>
+            </Validators>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="precio_m3" caption="Precio M3" numberOfValuesToDisplayForColumnFilter="3" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" decimalSeparator="." thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="comboBox">
+              <Values>
+                <Value name="89990" caption="89990"/>
+                <Value name="129990" caption="129990"/>
+                <Value name="149990" caption="149990"/>
+              </Values>
+            </EditProperties>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="cantidad_m3" caption="Cantidad M3" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" decimalSeparator="." thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+            <Validators>
+              <NumberClientValidatorInfo enabled="true"/>
+            </Validators>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="total" caption="Total" showColumnFilter="false" canSetNull="true" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <DivAttributes align="center" bold="true" italic="true"/>
+              <Format type="number" decimalSeparator="." thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+            <Validators>
+              <NumberClientValidatorInfo enabled="true"/>
+            </Validators>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="id"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="direccion"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefono"/>
+            <Column fieldName="precio_m3"/>
+            <Column fieldName="cantidad_m3"/>
+            <Column fieldName="total"/>
+          </List>
+          <View>
+            <Column fieldName="id"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="direccion"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefono"/>
+            <Column fieldName="precio_m3"/>
+            <Column fieldName="cantidad_m3"/>
+            <Column fieldName="total"/>
+          </View>
+          <Edit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="direccion"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefono"/>
+            <Column fieldName="precio_m3"/>
+            <Column fieldName="cantidad_m3"/>
+            <Column fieldName="total" visible="false"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="direccion"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefono"/>
+            <Column fieldName="precio_m3"/>
+            <Column fieldName="cantidad_m3"/>
+            <Column fieldName="total" visible="false"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="direccion"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefono"/>
+            <Column fieldName="cantidad_m3"/>
+            <Column fieldName="total"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="precio_m3"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="id"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="direccion"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefono"/>
+            <Column fieldName="precio_m3"/>
+            <Column fieldName="cantidad_m3"/>
+            <Column fieldName="total"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="id"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="direccion"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefono"/>
+            <Column fieldName="precio_m3"/>
+            <Column fieldName="cantidad_m3"/>
+            <Column fieldName="total"/>
+          </Print>
+          <Export>
+            <Column fieldName="id"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="direccion"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefono"/>
+            <Column fieldName="precio_m3"/>
+            <Column fieldName="cantidad_m3"/>
+            <Column fieldName="total"/>
+          </Export>
+          <Compare>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="direccion"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefono"/>
+            <Column fieldName="precio_m3"/>
+            <Column fieldName="cantidad_m3"/>
+            <Column fieldName="total" visible="false"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="direccion"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefono"/>
+            <Column fieldName="precio_m3"/>
+            <Column fieldName="cantidad_m3"/>
+            <Column fieldName="total" visible="false"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+      </Page>
+      <Page type="table" tableName="stock" numberByDataSource="0" fileName="stock" caption="Stock" shortCaption="Stock" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" deleteAbilityMode="3" deleteSelectedAbilityMode="3" contentEncoding="UTF-8" exportAllRecordsAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="31" printAvailable="13" highlightRowOnMouseHover="true" useActionImages="true" showKeyColumnsImagesInGridHeader="false" borderedTable="true" condensedTable="true" modalFormSize="1">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="id" caption="Id" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="nombre_producto" caption="Nombre Producto" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textBox" maxLength="100"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="precio_unitario" caption="Precio Unitario" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" decimalSeparator="." thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="id_usuario" caption="Id Usuario" showColumnFilter="false" canSetNull="true" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="cantidad" caption="Cantidad" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="cantidad"/>
+          </List>
+          <View>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="cantidad"/>
+          </View>
+          <Edit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="cantidad"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="cantidad"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="cantidad"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="cantidad"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="cantidad"/>
+          </Print>
+          <Export>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="cantidad"/>
+          </Export>
+          <Compare>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="cantidad"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="id_usuario"/>
+            <Column fieldName="cantidad"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+      </Page>
+      <Page type="table" tableName="total_stock" numberByDataSource="0" fileName="total_stock" caption="Total Stock" shortCaption="Total Stock" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="0" viewAbilityMode="0" editAbilityMode="0" multiEditAbility="0" copyAbilityMode="0" contentEncoding="UTF-8" exportAllRecordsAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="31" printAvailable="13" highlightRowOnMouseHover="true" useActionImages="true" showKeyColumnsImagesInGridHeader="false" borderedTable="true" condensedTable="true" modalFormSize="1">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="id" caption="Id" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="nombre_producto" caption="Nombre Producto" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textBox" maxLength="100"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="cantidad" caption="Cantidad" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="precio_unitario" caption="Precio Unitario" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" decimalSeparator="." thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="total_valor" caption="Total Valor" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" decimalSeparator="." thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="cantidad"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="total_valor"/>
+          </List>
+          <View>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="cantidad"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="total_valor"/>
+          </View>
+          <Edit>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="cantidad"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="total_valor"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="cantidad"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="total_valor"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="cantidad"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="total_valor"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="cantidad"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="total_valor"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="cantidad"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="total_valor"/>
+          </Print>
+          <Export>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="cantidad"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="total_valor"/>
+          </Export>
+          <Compare>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="cantidad"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="total_valor"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre_producto"/>
+            <Column fieldName="cantidad"/>
+            <Column fieldName="precio_unitario"/>
+            <Column fieldName="total_valor"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+      </Page>
+      <Page type="table" tableName="contacto" numberByDataSource="0" fileName="contacto" caption="Contacto" shortCaption="Contacto" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" deleteAbilityMode="3" deleteSelectedAbilityMode="3" contentEncoding="UTF-8" exportAllRecordsAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="31" printAvailable="13" highlightRowOnMouseHover="true" useActionImages="true" showKeyColumnsImagesInGridHeader="false" borderedTable="true" condensedTable="true" modalFormSize="1">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="id" caption="Id" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="nombre" caption="Nombre" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textBox" maxLength="100"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="email" caption="Email" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textBox" maxLength="100"/>
+            <Validators>
+              <EmailClientValidatorInfo enabled="true"/>
+            </Validators>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="asunto" caption="Asunto" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="mensaje" caption="Mensaje" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="fecha_contacto" caption="Fecha Contacto" canSetNull="true" selectedFilterOperators="2031871">
+            <ViewProperties type="dateTime" dateTimeFormat="Y-m-d H:i:s"/>
+            <EditProperties type="dateTime" dateTimeFormat="Y-m-d H:i:s" firstDayOfWeek="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="id_usuario" caption="Id Usuario" showColumnFilter="false" canSetNull="true" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="asunto"/>
+            <Column fieldName="mensaje"/>
+            <Column fieldName="fecha_contacto"/>
+            <Column fieldName="id_usuario"/>
+          </List>
+          <View>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="asunto"/>
+            <Column fieldName="mensaje"/>
+            <Column fieldName="fecha_contacto"/>
+            <Column fieldName="id_usuario"/>
+          </View>
+          <Edit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="asunto"/>
+            <Column fieldName="mensaje"/>
+            <Column fieldName="fecha_contacto"/>
+            <Column fieldName="id_usuario"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="asunto"/>
+            <Column fieldName="mensaje"/>
+            <Column fieldName="fecha_contacto"/>
+            <Column fieldName="id_usuario"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="asunto"/>
+            <Column fieldName="mensaje"/>
+            <Column fieldName="fecha_contacto"/>
+            <Column fieldName="id_usuario"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="asunto"/>
+            <Column fieldName="mensaje"/>
+            <Column fieldName="fecha_contacto"/>
+            <Column fieldName="id_usuario"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="asunto"/>
+            <Column fieldName="mensaje"/>
+            <Column fieldName="fecha_contacto"/>
+            <Column fieldName="id_usuario"/>
+          </Print>
+          <Export>
+            <Column fieldName="id"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="asunto"/>
+            <Column fieldName="mensaje"/>
+            <Column fieldName="fecha_contacto"/>
+            <Column fieldName="id_usuario"/>
+          </Export>
+          <Compare>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="asunto"/>
+            <Column fieldName="mensaje"/>
+            <Column fieldName="fecha_contacto"/>
+            <Column fieldName="id_usuario"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="nombre"/>
+            <Column fieldName="email"/>
+            <Column fieldName="asunto"/>
+            <Column fieldName="mensaje"/>
+            <Column fieldName="fecha_contacto"/>
+            <Column fieldName="id_usuario"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+      </Page>
+      <Page type="table" tableName="registro_inicio" numberByDataSource="0" fileName="registro_inicio" caption="Registro Inicio" shortCaption="Registro Inicio" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" deleteAbilityMode="3" deleteSelectedAbilityMode="3" contentEncoding="UTF-8" exportAllRecordsAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="31" printAvailable="13" highlightRowOnMouseHover="true" useActionImages="true" showKeyColumnsImagesInGridHeader="false" borderedTable="true" condensedTable="true" modalFormSize="1">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="user_id" caption="User Id" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="user_name" caption="User Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="user_password" caption="User Password" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="user_email" caption="User Email" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="user_token" caption="User Token" headerHint="Token for user account verification or user password reset." showColumnFilter="false" canSetNull="true" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="user_status" caption="User Status" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="user_id"/>
+            <Column fieldName="user_name"/>
+            <Column fieldName="user_password"/>
+            <Column fieldName="user_email"/>
+            <Column fieldName="user_token"/>
+            <Column fieldName="user_status"/>
+          </List>
+          <View>
+            <Column fieldName="user_id"/>
+            <Column fieldName="user_name"/>
+            <Column fieldName="user_password"/>
+            <Column fieldName="user_email"/>
+            <Column fieldName="user_token"/>
+            <Column fieldName="user_status"/>
+          </View>
+          <Edit>
+            <Column fieldName="user_id" visible="false"/>
+            <Column fieldName="user_name"/>
+            <Column fieldName="user_password"/>
+            <Column fieldName="user_email"/>
+            <Column fieldName="user_token"/>
+            <Column fieldName="user_status"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="user_id" visible="false"/>
+            <Column fieldName="user_name"/>
+            <Column fieldName="user_password"/>
+            <Column fieldName="user_email"/>
+            <Column fieldName="user_token"/>
+            <Column fieldName="user_status"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="user_id"/>
+            <Column fieldName="user_name"/>
+            <Column fieldName="user_password"/>
+            <Column fieldName="user_email"/>
+            <Column fieldName="user_token"/>
+            <Column fieldName="user_status"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="user_id"/>
+            <Column fieldName="user_name"/>
+            <Column fieldName="user_password"/>
+            <Column fieldName="user_email"/>
+            <Column fieldName="user_token"/>
+            <Column fieldName="user_status"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="user_id"/>
+            <Column fieldName="user_name"/>
+            <Column fieldName="user_password"/>
+            <Column fieldName="user_email"/>
+            <Column fieldName="user_token"/>
+            <Column fieldName="user_status"/>
+          </Print>
+          <Export>
+            <Column fieldName="user_id"/>
+            <Column fieldName="user_name"/>
+            <Column fieldName="user_password"/>
+            <Column fieldName="user_email"/>
+            <Column fieldName="user_token"/>
+            <Column fieldName="user_status"/>
+          </Export>
+          <Compare>
+            <Column fieldName="user_id" visible="false"/>
+            <Column fieldName="user_name"/>
+            <Column fieldName="user_password"/>
+            <Column fieldName="user_email"/>
+            <Column fieldName="user_token"/>
+            <Column fieldName="user_status"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="user_id" visible="false"/>
+            <Column fieldName="user_name"/>
+            <Column fieldName="user_password"/>
+            <Column fieldName="user_email"/>
+            <Column fieldName="user_token"/>
+            <Column fieldName="user_status"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+      </Page>
+    </Pages>
+    <UserAuthorization type="tableBased" tableName="registro_inicio" userIdField="user_id" userNameField="user_name" passwordField="user_password" userEmailField="user_email" userTokenField="user_token" userStatusField="user_status" passwordEncryption="SHA256" allowUserToChangePassword="true" selfRegistrationEnabled="true" recoveringPasswordEnabled="true"/>
+    <UserGrants>
+      <UserGrant userName="carlos" admin="1"/>
+      <UserGrant userName="vladimir"/>
+      <UserGrant userName="camila"/>
+      <UserGrant userName="defaultUser"/>
+      <UserPageGrants>
+        <PageGrants userName="carlos">
+          <PageGrant pageName="usuarios"/>
+          <PageGrant pageName="cotizacion" admin="1"/>
+          <PageGrant pageName="stock" admin="1"/>
+          <PageGrant pageName="total_stock" admin="1"/>
+          <PageGrant pageName="contacto" admin="1"/>
+          <PageGrant pageName="registro_inicio" admin="1"/>
+        </PageGrants>
+        <PageGrants userName="vladimir">
+          <PageGrant pageName="usuarios"/>
+          <PageGrant pageName="cotizacion"/>
+          <PageGrant pageName="stock"/>
+          <PageGrant pageName="total_stock"/>
+          <PageGrant pageName="contacto"/>
+          <PageGrant pageName="registro_inicio"/>
+        </PageGrants>
+        <PageGrants userName="camila">
+          <PageGrant pageName="usuarios"/>
+          <PageGrant pageName="cotizacion"/>
+          <PageGrant pageName="stock"/>
+          <PageGrant pageName="total_stock"/>
+          <PageGrant pageName="contacto"/>
+          <PageGrant pageName="registro_inicio"/>
+        </PageGrants>
+        <PageGrants userName="defaultUser">
+          <PageGrant pageName="usuarios"/>
+          <PageGrant pageName="cotizacion" select="1" insert="1"/>
+          <PageGrant pageName="stock"/>
+          <PageGrant pageName="total_stock" select="1" insert="1"/>
+          <PageGrant pageName="contacto"/>
+          <PageGrant pageName="registro_inicio"/>
+        </PageGrants>
+      </UserPageGrants>
+    </UserGrants>
+    <Header>
+&lt;h1 style=&quot;color: white; font-weight: bold; font-family: 'Arial Black', Arial, sans-serif;&quot;&gt;HomeEasy&lt;/h1&gt;    </Header>
+    <Footer/>
+    <PHPOptions/>
+    <Groups>
+      <Group caption="No group"/>
+    </Groups>
+    <outgoingMailSettings mailer="1" fromEmail="siberiano7919@gmail.com" fromName="carlos" smtp_host="http://localhost/easy" smpt_use_authentication="true" smpt_encryption="1"/>
+  </Presentation>
+  <UserCSS/>
+  <PdfUserStyles/>
+  <PrintUserStyles/>
+  <UserJS/>
+  <ExcludedPaths/>
+  <DefaultPageProperties recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" deleteAbilityMode="3" deleteSelectedAbilityMode="3" contentEncoding="UTF-8" exportAllRecordsAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="31" printAvailable="13" highlightRowOnMouseHover="true" useActionImages="true" showKeyColumnsImagesInGridHeader="false" borderedTable="true" condensedTable="true" modalFormSize="1"/>
+  <DefaultDataFormats numberAfterDecimal="0" DecimalSeparator="." ThousandSeparator="," DateTimeFormat="Y-m-d H:i:s" DateFormat="Y-m-d" firstDayOfWeek="1"/>
+</Project>
